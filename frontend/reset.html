@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reset Password - MediPear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: var(--medium-blurple-colour);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .reset-wrapper {
+      background-color: var(--dark-blurple-colour);
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    .reset-wrapper h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: var(--white-blue);
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      background-color: var(--brighter-medium-blurple-colour);
+      border-radius: 10px;
+      padding: 0 12px;
+    }
+
+    .input-container i {
+      color: #ccc;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    .input-container input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 11px 4px;
+      font-size: 14px;
+      color: white;
+      outline: none;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #4DD586;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .reset-btn:hover {
+      background-color: #12A34E;
+    }
+
+    .back-login {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--white-blue);
+    }
+
+    .back-login a {
+      color: #449ff5;
+      text-decoration: none;
+    }
+
+    .back-login a:hover {
+      text-decoration: underline;
+    }
+
+    .back-home {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .back-home a {
+      color: var(--white-blue);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .back-home a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="reset-wrapper">
+    <h1><i class="fa-solid fa-key"></i> Reset Your Password</h1>
+    <form>
+      <div class="form-group">
+        <label for="email">Enter your registered email</label>
+        <div class="input-container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" placeholder="example@email.com" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="new-password">New Password</label>
+        <div class="input-container">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="new-password" placeholder="Enter new password" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm New Password</label>
+        <div class="input-container">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="confirm-password" placeholder="Repeat new password" required />
+        </div>
+      </div>
+
+      <button type="submit" class="reset-btn">Reset Password</button>
+    </form>
+
+    <div class="back-login">
+      Remembered your password? <a href="login.html">Log In</a>
+    </div>
+
+    <div class="back-home">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

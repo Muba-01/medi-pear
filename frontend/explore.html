@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore - MediPear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: var(--medium-blurple-colour);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .explore-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px 40px;
+    }
+
+    .back-home-top {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-home-top a {
+      display: inline-block;
+      background-color: #4248BA;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-home-top a:hover {
+      background-color: #2A2F8A;
+    }
+
+    .explore-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .explore-header h1 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .explore-header p {
+      font-size: 15px;
+      color: var(--white-blue);
+    }
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+      gap: 25px;
+    }
+
+    .explore-card {
+      border-radius: 14px;
+      padding: 20px 24px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+    }
+
+    .explore-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .explore-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .explore-card p {
+      font-size: 14px;
+      color: #f0f0f0;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .explore-card a {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-card a:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    /* Rainbow Gradient Styles per card */
+    .card-1 {
+      background: linear-gradient(135deg, #3F2B96, #A8C0FF);
+    }
+    .card-2 {
+      background: linear-gradient(135deg, #4B2C5E, #DB7093);
+    }
+    .card-3 {
+      background: linear-gradient(135deg, #00416A, #799F0C);
+    }
+    .card-4 {
+      background: linear-gradient(135deg, #232526, #414345);
+    }
+    .card-5 {
+      background: linear-gradient(135deg, #1E3C72, #2A5298);
+    }
+    .card-6 {
+      background: linear-gradient(135deg, #373B44, #4286f4);
+    }
+
+    @media screen and (max-width: 600px) {
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .explore-card h3 {
+        font-size: 18px;
+      }
+
+      .explore-card p {
+        font-size: 13px;
+      }
+
+      .back-home-top {
+        position: static;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-home-top">
+    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </div>
+
+  <div class="explore-container">
+    <div class="explore-header">
+      <h1><i class="fa-solid fa-compass"></i> Explore</h1>
+      <p>Browse trending topics, communities, and personalized wellness paths.</p>
+    </div>
+
+    <div class="explore-grid">
+      <div class="explore-card card-1">
+        <h3>🧘 Mental Wellness</h3>
+        <p>Discover communities sharing emotional support, mindfulness, and therapy resources.</p>
+        <a href="mental.html">Explore Topic</a>
+      </div>
+
+      <div class="explore-card card-2">
+        <h3>🥗 Healthy Nutrition</h3>
+        <p>Explore clean eating, diet guides, superfoods, and long-term health strategies.</p>
+        <a href="nutrition.html">Explore Topic</a>
+      </div>
+
+      <div class="explore-card card-3">
+        <h3>💪 Fitness & Movement</h3>
+        <p>Workout programs, body goals, and staying motivated with an active community.</p>
+        <a href="fitness.html">Explore Topic</a>
+      </div>
+
+      <div class="explore-card card-4">
+        <h3>🌙 Sleep & Recovery</h3>
+        <p>Discover how to improve sleep quality, manage fatigue, and recharge effectively.</p>
+        <a href="sleep.html">Explore Topic</a>
+      </div>
+
+      <div class="explore-card card-5">
+        <h3>📚 Wellness Articles</h3>
+        <p>Curated content and guides from healthcare writers and everyday members.</p>
+        <a href="wellness.html">Explore Topic</a>
+      </div>
+
+      <div class="explore-card card-6">
+        <h3>🔬 Supplements & Research</h3>
+        <p>Understand supplements with expert-backed data and real-world user insights.</p>
+        <a href="supplements.html">Explore Topic</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+

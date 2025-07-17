@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unanswered Questions - MediPear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    body {
+      background-color: var(--medium-blurple-colour);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .back-home-top {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-home-top a {
+      background-color: #4248BA;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-home-top a:hover {
+      background-color: #2A2F8A;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .question-card {
+      background-color: var(--dark-blurple-colour);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .question-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #D8ECFF;
+    }
+
+    .tag {
+      background-color: #5E60CE;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 10px;
+      margin-right: 6px;
+      color: white;
+      display: inline-block;
+    }
+
+    .actions button {
+      background-color: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      margin-right: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      .back-home-top {
+        position: static;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-home-top">
+    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </div>
+
+  <div class="container">
+    <h1>❓ Unanswered Questions</h1>
+
+    <div class="question-card">
+      <h3>What are some healthy snack options for students on a budget?</h3>
+      <div class="tags">
+        <span class="tag">nutrition</span> <span class="tag">student-life</span>
+      </div>
+      <div class="actions">
+        <button class="action-btn">💬 Answer Now</button>
+        <button class="action-btn">🚩 Report</button>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <h3>Does exercising at night affect sleep quality?</h3>
+      <div class="tags">
+        <span class="tag">fitness</span> <span class="tag">sleep</span>
+      </div>
+      <div class="actions">
+        <button class="action-btn">💬 Answer Now</button>
+        <button class="action-btn">🚩 Report</button>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <h3>Are cold showers actually good for muscle recovery?</h3>
+      <div class="tags">
+        <span class="tag">recovery</span> <span class="tag">wellness</span>
+      </div>
+      <div class="actions">
+        <button class="action-btn">💬 Answer Now</button>
+        <button class="action-btn">🚩 Report</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+

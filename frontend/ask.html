@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ask a Question - MediPear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: var(--medium-blurple-colour);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 60px 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ask-container {
+      background-color: var(--dark-blurple-colour);
+      max-width: 800px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .back-home-top {
+      position: absolute;
+      top: -50px;
+      left: 0;
+    }
+
+    .back-home-top a {
+      display: inline-block;
+      background-color: #4248BA;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-home-top a:hover {
+      background-color: #2A2F8A;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--white-blue);
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      background-color: var(--brighter-medium-blurple-colour);
+      color: white;
+      box-sizing: border-box;
+      resize: vertical;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 25px;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      flex: 1 1 45%;
+    }
+
+    .btn-submit {
+      background-color: #4DD586;
+      color: white;
+    }
+
+    .btn-submit:hover {
+      background-color: #12A34E;
+    }
+
+    .btn-cancel {
+      background-color: #4248BA;
+      color: white;
+    }
+
+    .btn-cancel:hover {
+      background-color: #222669;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        flex: 1 1 100%;
+      }
+
+      .back-home-top {
+        position: static;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ask-container">
+    <div class="back-home-top">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <h1><i class="fa-solid fa-circle-question"></i> Ask a New Question</h1>
+    <form id="askForm">
+      <div class="form-group">
+        <label for="title">Question Title</label>
+        <input type="text" id="title" placeholder="Summarize your question briefly..." required />
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">-- Select a category --</option>
+          <option value="Health">Health</option>
+          <option value="Nutrition">Nutrition</option>
+          <option value="Mental Wellness">Mental Wellness</option>
+          <option value="Fitness">Fitness</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" placeholder="e.g., anxiety, healthy-diet, sleep" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Question Details</label>
+        <textarea id="description" placeholder="Provide more context, background, and what you've tried..." required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-submit">Submit Question</button>
+        <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    // Cancel button clears form
+    document.getElementById('cancelBtn').addEventListener('click', () => {
+      document.getElementById('askForm').reset();
+    });
+
+  </script>
+
+</body>
+</html>

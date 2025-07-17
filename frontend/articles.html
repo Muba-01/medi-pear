@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - MediPear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    body {
+      background-color: var(--medium-blurple-colour);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .back-home-top {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-home-top a {
+      background-color: #4248BA;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-home-top a:hover {
+      background-color: #2A2F8A;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--dark-blurple-colour);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #D8ECFF;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #B8C7E0;
+      line-height: 1.5;
+    }
+
+    .category-tag {
+      background-color: #5E60CE;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 11px;
+      color: white;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .back-home-top {
+        position: static;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back-home-top">
+    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </div>
+
+  <div class="container">
+    <h1>📚 Health & Wellness Articles</h1>
+
+    <div class="card-list">
+      <div class="card">
+        <span class="category-tag">Mental Health</span>
+        <h3>How Journaling Can Improve Emotional Stability</h3>
+        <p>Learn how writing a few lines daily can reduce stress and improve clarity of thought.</p>
+      </div>
+      <div class="card">
+        <span class="category-tag">Nutrition</span>
+        <h3>The Truth About Intermittent Fasting</h3>
+        <p>Explore what science really says about fasting, metabolism, and sustainable results.</p>
+      </div>
+      <div class="card">
+        <span class="category-tag">Fitness</span>
+        <h3>Why You Should Prioritize Mobility Training</h3>
+        <p>Mobility is now the foundation of modern fitness. Here's how to get started.</p>
+      </div>
+      <div class="card">
+        <span class="category-tag">Sleep</span>
+        <h3>Top 5 Techniques to Fall Asleep Faster</h3>
+        <p>From breathing exercises to blue-light blocking, try these expert-backed methods.</p>
+      </div>
+      <div class="card">
+        <span class="category-tag">Supplements</span>
+        <h3>Are Multivitamins Still Worth It?</h3>
+        <p>Recent research challenges long-standing beliefs. Should you still be taking them?</p>
+      </div>
+      <div class="card">
+        <span class="category-tag">Wellness</span>
+        <h3>The Science Behind Cold Showers & Mood Boosting</h3>
+        <p>Studies show cold exposure improves energy and resilience. Here’s how to try it safely.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+<div class="card">
+  <span class="category-tag">Sleep</span>
+  <h3>Top 5 Techniques to Fall Asleep Faster</h3>
+  <p>From breathing to blue-light blocking. Click below to explore more.</p>
+  <button onclick="openModal('sleep-article')" class="read-more-btn">Read More</button>
+</div>
+
+<div id="sleep-article" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('sleep-article')"><i class="fa-solid fa-xmark"></i></button>
+    <h2>Top 5 Techniques to Fall Asleep Faster</h2>
+    <p>
+      Falling asleep quickly can improve your quality of life. Here are five scientifically-backed tips:
+      <br><br>
+      1. Practice deep breathing (4-7-8 technique)<br>
+      2. Block blue light before bed using screen filters<br>
+      3. Keep a consistent sleep schedule<br>
+      4. Avoid caffeine after 3PM<br>
+      5. Try magnesium or chamomile tea as natural relaxers
+      <br><br>
+      These methods work best when combined with a relaxing bedtime routine.
+    </p>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add("active");
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove("active");
+  }
+</script>
