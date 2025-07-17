@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - MediPear</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- new css from muba for new login form-->
+<style>
+  :root {
+    --input-bg: #1F1830;
+    --medium-blurple-colour: #3E2C67;
+    --dark-blurple-colour: #2B1D4C;
+    --white-blue: #DDEBFF;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--medium-blurple-colour);
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  form {
+    background-color: var(--dark-blurple-colour);
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+
+  form h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--input-bg);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #4DD586;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  form button[type="submit"]:hover {
+    background-color: #12A34E;
+  }
+
+  .extra-options {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--white-blue);
+    font-size: 13px;
+  }
+
+  .extra-options a {
+    color: #449ff5;
+    text-decoration: none;
+  }
+
+  .extra-options a:hover {
+    text-decoration: underline;
+  }
+
+  .back-home {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .back-home a {
+    color: var(--white-blue);
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .back-home a:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 400px) {
+    form {
+      padding: 25px 20px;
+      max-width: 90%;
+    }
+  }
+</style>
+
+  <!-- <style> // old css from jocelyn
     :root {
       --input-bg: #1F1830;
     }
@@ -121,12 +233,19 @@
         max-width: 90%;
       }
     }
-  </style>
+  </style> -->
 </head>
+
 <body>
   <div class="login-wrapper">
     <h1><i class="fa-solid fa-right-to-bracket"></i> Login</h1>
-    <form>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p id="message"></p>
+    </form>
+    <!-- <form>
       <div class="input-field">
         <input type="text" placeholder="Username or Email" required />
         <i class="fa-solid fa-user"></i>
@@ -136,7 +255,7 @@
         <i class="fa-solid fa-lock"></i>
       </div>
       <button class="login-btn" type="submit">Log In</button>
-    </form>
+    </form> -->
 
     <div class="extra-options">
       Forgot your password? <a href="reset.html">Reset it</a><br>
@@ -147,5 +266,8 @@
       <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
     </div>
   </div>
+  <!-- LOGIN code for connecting frontend to backend --->
+  <script src="./login.js"></script>
 </body>
+
 </html>

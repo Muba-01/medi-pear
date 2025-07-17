@@ -4,7 +4,6 @@ const circle = document.querySelector('.circle');
 const sidebar = document.querySelector('.side-navbar');
 // const sidebarLinks = document.querySelectorAll('.side-navbar ul li a');
 
-
     circle.addEventListener('click', () => {
     sidebar.classList.toggle('closed');
     circle.classList.toggle('closed');
@@ -14,3 +13,6 @@ const sidebar = document.querySelector('.side-navbar');
     icon.classList.toggle('fa-angle-left');
 
     });
+
+ 
+
