@@ -9,6 +9,7 @@ const { connectToDatabase, getDb } = require('./db'); //connect to db
 
 app.use(cors()); // allow cross-origin requests 
 app.use(express.json()); // parse JSON
+
 app.use(express.static(path.join(__dirname, 'public'))); // serve the static files
 
 
